@@ -1,0 +1,67 @@
+% =====================================================================
+%  Makerere University MSc research proposal template
+%  https://github.com/<your-username>/makerere-msc-proposal-template
+%
+%  Compile with pdfLaTeX; the bibliography runs through Biber.
+%  On Overleaf: Menu -> Compiler = pdfLaTeX, Main document = main.tex.
+%  Locally:     latexmk -pdf main.tex
+%
+%  Order of work:
+%    1. metadata.tex   your name, title, supervisors, dates
+%    2. frontmatter/   declaration, acknowledgements, abbreviations, summary
+%    3. chapters/      your three chapters
+%    4. backmatter/    budget and work plan
+%    5. references.bib your references
+%  preamble.tex holds the formatting and rarely needs editing.
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+
+\input{metadata}
+\input{preamble}
+
+% Uncomment the next line to hide every grey guidance note before submission.
+% \showguidancefalse
+
+\begin{document}
+
+% ------------------------- Preliminary pages -------------------------
+\pagenumbering{gobble}
+\input{frontmatter/titlepage}
+
+\cleardoublepage
+\pagenumbering{roman}
+\input{frontmatter/declaration}
+\input{frontmatter/acknowledgements}
+
+\clearpage
+\tableofcontents
+
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoftables
+
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\listoffigures
+
+\input{frontmatter/abbreviations}
+\input{frontmatter/summary}
+
+% ---------------------------- Main text ------------------------------
+\clearpage
+\pagenumbering{arabic}
+\input{chapters/chapter1_introduction}
+\input{chapters/chapter2_literature_review}
+\input{chapters/chapter3_materials_methods}
+
+% ---------------------------- References -----------------------------
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{REFERENCES}
+\printbibliography[title={REFERENCES}]
+
+% ---------------------------- Appendices -----------------------------
+\input{backmatter/appendix1_budget}
+\input{backmatter/appendix2_workplan}
+
+\end{document}

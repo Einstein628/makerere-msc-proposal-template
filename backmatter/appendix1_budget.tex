@@ -1,0 +1,43 @@
+% =====================================================================
+%  Appendix I -- Budget (landscape)
+%  Appendix tables are numbered I.1, I.2, ... and II.1, II.2, ...
+% =====================================================================
+\clearpage
+% Appendices are paginated I, II, III, ... at the bottom centre of the
+% landscape page (see \lscapefolio in preamble.tex).
+\pagenumbering{Roman}
+\pagestyle{empty}
+\lscapefolio
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\begin{landscape}
+\chapter*{APPENDIX I:}\thispagestyle{empty}\vspace*{-12pt}
+\addcontentsline{toc}{chapter}{APPENDIX I: RESEARCH BUDGET}
+\renewcommand{\thetable}{I.\arabic{table}}
+\setcounter{table}{0}
+\begin{center}
+  \captionsetup{type=table}
+  \caption{Provisional Research Budget}
+  \label{tab:A1.1}
+  \footnotesize
+  \setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.0}\singlespacing
+  \begin{tabularx}{\linewidth}{@{}l Y c c r r@{}}
+    \toprule
+    \textbf{No.} & \textbf{BUDGET ITEM} & \textbf{UNIT} & \textbf{QTY.} & \textbf{UNIT COST (US\$)} & \textbf{TOTAL (US\$)} \\
+    \midrule
+    \rowcolor{gray!12}\multicolumn{6}{@{}l}{\textbf{A. [First category]}} \\
+    \textbf{1} & {[}Item] & Lot & 1 & 200 & \textbf{200} \\
+    \textbf{2} & {[}Item] & Lot & 1 & 150 & \textbf{150} \\
+    \multicolumn{5}{r}{\textbf{Subtotal A}} & \textbf{350} \\
+    \rowcolor{gray!12}\multicolumn{6}{@{}l}{\textbf{B. [Second category]}} \\
+    \textbf{3} & {[}Item] & Pair & 10 & 30 & \textbf{300} \\
+    \multicolumn{5}{r}{\textbf{Subtotal B}} & \textbf{300} \\
+    \rowcolor{gray!12}\multicolumn{6}{@{}l}{\textbf{C. Contingency}} \\
+    \textbf{4} & {[}Repeat assays, price variation, replacement consumables] & Lot & 1 & 120 & \textbf{120} \\
+    \multicolumn{5}{r}{\textbf{Subtotal C}} & \textbf{120} \\
+    \midrule
+    \multicolumn{5}{r}{\textbf{\color{red}GRAND TOTAL}} & \textbf{\color{red}US\$770} \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+\end{landscape}
+\restoregeometry
